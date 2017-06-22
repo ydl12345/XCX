@@ -1,0 +1,61 @@
+<!--index.wxml-->
+
+  <swiper 
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">  
+      <block wx:for="{{imgUrls}}">  
+        <swiper-item>  
+           <navigator url="{{item.link}}" hover-class="navigator-hover">  
+            <image src="{{item.url}}" class="slide-image" />  
+           </navigator>   
+        </swiper-item>  
+      </block>  
+</swiper> 
+
+
+<view class="contain">
+
+  <view class="navbg">
+    <view id="0" class="{{currentTab==0?'select':'normal'}}" bindtap="switchNav">火车票</view>
+    <view id="1"  class="{{currentTab==1?'select':'normal'}}"bindtap="switchNav">飞机票</view>
+  </view>
+  <view class="form">
+    <form>
+      <view class="area">
+        <input class="city" name="city" value="哈尔滨" /> 
+        <image src="../../images/icon/hcp/xz.jpg"></image>
+        <input class="city" name="city" value="北京" /> 
+      </view>
+
+     <view class="section">
+        <picker mode="date" value="{{date}}" start="2015年09月01日" end="2017年09月01日" bindchange="bindDateChange">
+       <view class="picker"> {{date}}            </view>
+      </picker>
+      <text> ></text>
+    </view>
+    <view class="body-view">
+      <text>高铁动车</text>
+      <switch checked bindchange="switch1Change"/>
+      <text>学生票</text>
+      <switch bindchange="switch2Change"/>
+  </view>
+    <view class="btn"><navigator url="/pages/detail/detail">
+    查询</navigator></view>
+
+    <view class="others">
+      <text>北京→佳木斯</text>
+       <text>佳木斯→北京</text>
+       <text>清除历史</text>
+    </view>
+
+    <view class="imgs">
+      <image src="../../images/icon/hcp/jsqp.jpg"></image>
+      <image src="../../images/icon/hcp/zxxz.jpg"></image>
+      <image src="../../images/icon/hcp/qshh.jpg"></image>
+      <image src="../../images/icon/hcp/czjd.jpg"></image>
+    </view>
+
+  </form>
+</view>
+
+</view>
+

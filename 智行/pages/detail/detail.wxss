@@ -1,0 +1,32 @@
+.start{
+  background-color: #5495e5;
+  display: flex;
+  justify-content: space-around;
+
+  height: 40px;
+  color: #fff;
+}
+.navbg{
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+  background-color: #515763;
+  width: 100%;
+  padding: 15px 0;
+  color: #fff;
+  justify-content: space-around;
+
+}
+.navbg view{
+  padding: 0 10px;
+}
+
+.select{
+  color: #5495e5;
+}
+.normal{
+  color: #fff;
+}
+
+
